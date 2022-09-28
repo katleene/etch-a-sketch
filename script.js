@@ -1,5 +1,6 @@
 function makeGrid(numOfCellsPerSide) {
 	const canvas = document.querySelector('.canvas');
+	canvas.innerHTML = '';
 
 	for (let i = 0; i < numOfCellsPerSide; i++) {
 		const row = document.createElement('div');
@@ -22,4 +23,20 @@ function makeGrid(numOfCellsPerSide) {
 	);
 }
 
+function promptUserForCountOfCells() {
+	const countOfCells = prompt('Enter the count of cells per side.');
+
+	if (countOfCells > 100) {
+		alert("The count of cells can't be grater than 100.");
+		promptUserForCountOfCells();
+		return;
+	}
+
+	makeGrid(countOfCells);
+}
+
 makeGrid(100);
+
+document
+	.querySelector('#askCountOfCells')
+	.addEventListener('click', promptUserForCountOfCells);
