@@ -1,0 +1,53 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Roboto, sans-serif;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+}
+
+/* main */
+
+.main{
+    display:flex;
+    height: 100%;
+}
+
+.sidebar{
+    flex: 0 0 250px; 
+}
+
+.canvas-container{
+    flex:1;
+}
+
+.canvas{
+    height: 400px;
+    width: 400px;
+    margin: 50px auto;
+    border: 2px solid #ddd;
+}
+
+/* header & footer */
+
+.header,.footer{
+    padding: 20px;
+    color:#fff;
+}
+.header{
+    background-color: rgb(92, 102, 117);
+}
+
+.footer{
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+}
