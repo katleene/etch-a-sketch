@@ -105,6 +105,10 @@ function setDrawingMode(e) {
 	}
 }
 
+function eraseCanvas() {
+	makeGrid(countOfCells);
+}
+
 let drawingMode = 1;
 let countOfCells = 100;
 
@@ -113,6 +117,8 @@ makeGrid(countOfCells);
 document
 	.querySelector('#askCountOfCells')
 	.addEventListener('click', promptUserForCountOfCells);
+
+document.querySelector('#erase').addEventListener('click', eraseCanvas);
 
 document
 	.querySelectorAll('input[type="radio"]')
