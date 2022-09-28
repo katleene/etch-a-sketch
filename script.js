@@ -24,15 +24,21 @@ function makeGrid(numOfCellsPerSide) {
 }
 
 function promptUserForCountOfCells() {
-	const countOfCells = prompt('Enter the count of cells per side.');
+	let countOfCells = prompt('Enter the count of cells per side.');
+
+	countOfCells = Number(countOfCells);
+
+	if (countOfCells == 0 || !Number.isFinite(countOfCells)) {
+		alert('The value you entered is not a positive number.');
+		promptUserForCountOfCells();
+		return;
+	}
 
 	if (countOfCells > 100) {
 		alert("The count of cells can't be grater than 100.");
 		promptUserForCountOfCells();
 		return;
 	}
-
-	makeGrid(countOfCells);
 }
 
 makeGrid(100);

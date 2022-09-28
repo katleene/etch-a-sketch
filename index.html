@@ -17,7 +17,22 @@
     </div>
     <div class="main">
         <div class="sidebar">
-            <button id="askCountOfCells">Set Cell Number</button>       
+            <button id="askCountOfCells">Set Cell Number</button>
+            <div id="radio-buttons-container">
+                <h4>Drawing Mode</h4>
+                <div>
+                    <input type="radio" id="radio-black" checked name="draw_mode" value="1">
+                    <label for="radio-black">Black</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="radio-rainbow" name="draw_mode" value="2">
+                    <label for="radio-rainbow">Rainbow</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="radio-transparent-black" name="draw_mode" value="3">
+                    <label for="radio-transparent-black">Transparent Black</label>
+                </div>
+            </div>      
         </div>
         <div class="canvas-container">
             <div class="canvas"></div>
