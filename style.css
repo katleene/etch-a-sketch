@@ -35,7 +35,20 @@ h1{
     width: 400px;
     margin: 50px auto;
     border: 2px solid #ddd;
+
+    display: flex;
+    flex-direction: column;
 }
+
+.row{
+    flex:1;
+    display: flex;
+}
+
+.cell{
+    flex:1;
+}
+
 
 /* header & footer */
 
