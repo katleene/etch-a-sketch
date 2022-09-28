@@ -14,6 +14,12 @@ function makeGrid(numOfCellsPerSide) {
 			row.appendChild(cell);
 		}
 	}
+
+	document.querySelectorAll('.cell').forEach((cell) =>
+		cell.addEventListener('mouseover', (e) => {
+			e.target.style.backgroundColor = '#000';
+		})
+	);
 }
 
-makeGrid(10);
+makeGrid(100);
