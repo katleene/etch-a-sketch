@@ -1,3 +1,3 @@
 # etch-a-sketch
 
-Exercise from The Odin Project.
+An Etch a sketch implementation in javascript.
